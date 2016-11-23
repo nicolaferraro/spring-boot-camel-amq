@@ -62,7 +62,8 @@
                 <method method="generateFileName" ref="orderGenerator"/>
             </setHeader>
             <log id="route-log-order" message="Generating order ${file:name}"/>
-            <to uri="log:DEBUG"/>
+            <convertBodyTo type="java.lang.String"/>
+            <to uri="log:INFO"/>
         </route>
     </camelContext>
 </beans>
